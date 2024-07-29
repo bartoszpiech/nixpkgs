@@ -2,11 +2,11 @@
 
 stdenv.mkDerivation rec {
   pname = "tibia";
-  version = "10.90";
+  version = "x64";
 
   src = fetchurl {
-    url = "http://static.tibia.com/download/tibia${lib.replaceStrings ["."] [""] version}.tgz";
-    sha256 = "11mkh2dynmbpay51yfaxm5dmcys3rnpk579s9ypfkhblsrchbkhx";
+    url = "http://static.tibia.com/download/tibia.${version}.tar.gz";
+    sha256 = "4dd9adbb232bab90e7620480fa875b9a500379a146e8fb4f4ae3bbf917b16ba0";
   };
 
   shell = stdenv.shell;
